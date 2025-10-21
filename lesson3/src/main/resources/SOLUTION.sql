@@ -1,4 +1,4 @@
-update student set birthday = '2001-09-11' where birthday is null;
+delete from student where birthday is null;
 alter table student alter column birthday set not null;
 
 DELETE FROM mark WHERE mark < 1 OR mark > 10;
