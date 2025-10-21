@@ -1,5 +1,4 @@
-ALTER TABLE student
-    ALTER COLUMN birthday SET DEFAULT '2000-01-01';
+ALTER TABLE student ALTER COLUMN birthday DROP NOT NULL;
 insert into student(name, groupnumber)
 values ('John', 1), ('Chris', 1), ('Carl', 1),
        ('Oliver', 2), ('James', 2), ('Lucas', 2), ('Henry', 2),

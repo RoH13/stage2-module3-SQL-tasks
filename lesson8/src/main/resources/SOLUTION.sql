@@ -1,7 +1,7 @@
-select min(birthday) from student;
+select max(birthday) from student;
 
-select max(payment_date) from payment;
+select min(payment_date) from payment;
 
-select avg(mark) from mark where subject_id in (select id from subject where name = 'math');
+select avg(mark) from mark where subject_id in (select id from subject where name = 'Math');
 
 select min(amount) from Payment where type_id in (select id from PaymentType where name = 'WEEKLY');

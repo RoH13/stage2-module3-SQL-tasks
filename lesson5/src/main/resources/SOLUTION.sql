@@ -1,13 +1,13 @@
 
 select * from payment where amount >= 500;
 
-SELECT * FROM student WHERE EXTRACT(YEAR FROM AGE(birthday)) > 20;
+SELECT * FROM student WHERE birthday < DATEADD(year, -20, CAST('20001010' AS DATE));
 
-SELECT * FROM student WHERE groupnumber = 10 AND birthday > CURRENT_DATE - INTERVAL '20 years';
+SELECT * FROM student WHERE groupnumber = 10 AND birthday > DATEADD(year, -20, CAST('20001010' AS DATE));
 
 select * from student where name like 'Mike%' or groupnumber in (4, 5, 6);
 
-select * from payment where payment_date > current_date - interval '8 months';
+SELECT * FROM payment WHERE payment_date >= DATEADD(month, -8, CAST('20001010' AS DATE)) AND payment_date <= CAST('20001010' AS DATE);
 
 select * from student where name like 'A%';
 
