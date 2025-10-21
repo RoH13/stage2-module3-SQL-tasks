@@ -1,11 +1,21 @@
-ALTER TABLE student ALTER COLUMN birthday DROP NOT NULL;
-insert into student(name, groupnumber)
-values ('John', 1), ('Chris', 1), ('Carl', 1),
-       ('Oliver', 2), ('James', 2), ('Lucas', 2), ('Henry', 2),
-       ('Jacob', 3),  ('Logan', 3),
-       ('Ivan', 4) , ('Fedor', 4), ('Misha', 4), ('Sam', 4),
-       ('Grisha', 5), ('Sasha', 5), ('Alex', 5);
-
+INSERT INTO student (name, groupnumber, birthday)
+VALUES
+    ('John', 1, '1995-01-15'),
+    ('Chris', 1, '1995-02-20'),
+    ('Carl', 1, '1995-03-10'),
+    ('Oliver', 2, '1996-04-05'),
+    ('James', 2, '1996-05-12'),
+    ('Lucas', 2, '1996-06-18'),
+    ('Henry', 2, '1996-07-22'),
+    ('Jacob', 3, '1997-08-30'),
+    ('Logan', 3, '1997-09-14'),
+    ('Ivan', 4, '1998-10-08'),
+    ('Fedor', 4, '1998-11-25'),
+    ('Misha', 4, '1998-12-03'),
+    ('Sam', 4, '1999-01-19'),
+    ('Grisha', 5, '1999-02-28'),
+    ('Sasha', 5, '1999-03-15'),
+    ('Alex', 5, '1999-04-10');
 insert into subject(name, grade)
 values ('art', 1), ('music', 1),
        ('geography', 2), ('history', 2),

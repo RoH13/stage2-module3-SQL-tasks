@@ -1,7 +1,7 @@
 
-delete from mark where student_id in (select id from (select id from student where gr > 4));
-delete from payment where student_id in (select id from (select id from student where gr > 4));
-delete from student where id in (select id from (select id from student where gr > 4));
+delete from mark where student_id in (select id from (select id from student where grade > 4));
+delete from payment where student_id in (select id from (select id from student where grade > 4));
+delete from student where id in (select id from (select id from student where grade > 4));
 
 
 delete from student where id in (select student_id from mark group by student_id having min(mark) < 4);
